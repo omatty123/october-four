@@ -49,13 +49,13 @@ components:
 
 The real evening light at American Family Field establishes the setting. Large, plain lettering introduces the matchup; two supplied player portraits preserve its personal tension. A cream passage presents the pitch record, followed by a navy passage with the final score.
 
-This is an independent Brewers fan remembrance. “Our best,” “their best,” and “we won” express the creator’s perspective. Preserve that voice without presenting those phrases as statistical rankings or official MLB endorsement.
+This is an independent Brewers fan remembrance. The creator confirmed that “our best” means Jackson Chourio and “their best” means San Diego's top closer, Mason Miller. Preserve that specific matchup and the Brewers voice. “Their best” does not mean the best Padres player overall. No official MLB endorsement is claimed.
 
 This document records `index.html`, `styles.css`, and `app.js` after the desktop and mobile visual review on October 5, 2026. The reviewer returned “ship” with no material fixes.
 
 ## Colors
 
-Navy is the main surface; deep navy distinguishes the game situation. Cream supplies both dark-surface text and the contrasting at-bat surface. Gold emphasizes the opposing-player headline, Milwaukee’s result, and the watch action. Muted text and fine line color support facts without competing with the photographs.
+Navy is the main surface; deep navy distinguishes the game situation. Cream supplies both dark-surface text and the contrasting at-bat surface. Gold emphasizes the “Their best.” headline, Milwaukee’s result, and the watch action. Muted text and fine line color support facts without competing with the photographs.
 
 The at-bat passage uses dark supporting text (`#465460`), fine rules (`#b9bdb7` / `#bcc1ba`), a selected pitch fill (`#e4dfc4`), and a winning pitch fill (`#d9e1c7`). Green (`#39502e`) identifies the winning score and hit mark. The photograph supplies the sunset color.
 
@@ -95,7 +95,7 @@ Keep the full pitch list and final result in semantic HTML when JavaScript is un
 ## Do's and Don'ts
 
 - Use the supplied broadcast screenshots, factual pitch data, and source links; preserve the complete PNG originals and image credits.
-- Keep the user’s fan perspective and the two-player comparison intact.
+- Keep the confirmed comparison intact: Chourio against San Diego's top closer, Miller, from the user's Brewers perspective.
 - Keep controls usable by keyboard, text readable over images, and the complete outcome available without JavaScript.
 - Do not replace real frames with generated players, a fabricated ballpark, ASCII imagery, or decorative alterations to the photographs.
 - Do not add autoplay, unrelated statistics, shadowed card grids, or decoration that delays the matchup and outcome.

@@ -2,6 +2,8 @@
 
 A Brewers fan remembrance of Jackson Chourio's walk-off against Mason Miller in NLDS Game 2. Built from three supplied broadcast screenshots and the official MLB game record.
 
+The creator's confirmed meaning: “our best” is Chourio; “their best” is San Diego's top closer, Miller.
+
 Live address after deployment: https://omatty123.github.io/october-four/
 
 This directory is an independent repository. The surrounding META workspace and its private teaching material are excluded.

@@ -12,7 +12,7 @@ Plain static HTML, CSS, and JavaScript. GitHub Pages is the user's confirmed def
 
 ## Users
 
-The user wants a webpage remembering this baseball day. Inferred working audience: Brewers fans remembering the ninth inning. An optional audience question was sent; the user's words “our best” and the Brewers screenshot support this assumption.
+Readers of the creator's Brewers remembrance of this baseball day.
 
 ## Product Purpose
 
@@ -28,4 +28,4 @@ Preserve the original screenshots and attribute the broadcast. Use actual game f
 
 ## Brand Commitments
 
-The user's central phrasing is “our best, vs their best, with the sun setting on the ball park, and what happened?” A Brewers perspective is a working assumption. This is an independent fan remembrance, with no affiliation claimed.
+The user's central phrasing is “our best, vs their best, with the sun setting on the ball park, and what happened?” The user confirmed: “our best just means CHOURIO their best just means TOP CLOSER, MILLER.” “Our best” names Jackson Chourio; “their best” names Mason Miller as San Diego's top closer. Preserve this specific matchup and the Brewers perspective. This is an independent fan remembrance, with no affiliation claimed.
