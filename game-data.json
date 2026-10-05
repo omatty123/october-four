@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-04",
+  "day": "Sunday",
+  "gameId": 849825,
+  "gameType": "National League Division Series",
+  "gameNumber": 2,
+  "venue": "American Family Field",
+  "city": "Milwaukee, Wisconsin",
+  "scheduledFirstPitchLocal": "3:00 PM CDT",
+  "actualFirstPitchUtc": "2026-10-04T20:08:00.000Z",
+  "attendance": 41683,
+  "initialState": {
+    "inning": 9,
+    "half": "bottom",
+    "outs": 2,
+    "balls": 0,
+    "strikes": 0,
+    "score": {
+      "Padres": 3,
+      "Brewers": 2
+    },
+    "bases": {
+      "first": "Joey Ortiz",
+      "second": "Sal Frelick",
+      "third": "Christian Yelich"
+    },
+    "batter": "Jackson Chourio",
+    "pitcher": "Mason Miller",
+    "pitcherPitchesBeforeAtBat": 34,
+    "seriesBefore": {
+      "Brewers": 1,
+      "Padres": 0
+    }
+  },
+  "atBatLocal": {
+    "start": "2026-10-04T18:20:29.820000-05:00",
+    "end": "2026-10-04T18:22:52.959000-05:00"
+  },
+  "pitches": [
+    {
+      "number": 1,
+      "type": "Four-Seam Fastball",
+      "typeCode": "FF",
+      "speedMph": 100.8,
+      "description": "Swinging Strike",
+      "countAfter": {
+        "balls": 0,
+        "strikes": 1
+      },
+      "outs": 2,
+      "startTimeUtc": "2026-10-04T23:20:32.114Z",
+      "plateLocationFeet": {
+        "x": -0.5077207748277185,
+        "z": 2.8349493479862904
+      },
+      "hitData": null
+    },
+    {
+      "number": 2,
+      "type": "Four-Seam Fastball",
+      "typeCode": "FF",
+      "speedMph": 102.2,
+      "description": "Ball",
+      "countAfter": {
+        "balls": 1,
+        "strikes": 1
+      },
+      "outs": 2,
+      "startTimeUtc": "2026-10-04T23:20:51.614Z",
+      "plateLocationFeet": {
+        "x": 1.2269007442013973,
+        "z": 2.620504446705929
+      },
+      "hitData": null
+    },
+    {
+      "number": 3,
+      "type": "Four-Seam Fastball",
+      "typeCode": "FF",
+      "speedMph": 102.2,
+      "description": "Swinging Strike",
+      "countAfter": {
+        "balls": 1,
+        "strikes": 2
+      },
+      "outs": 2,
+      "startTimeUtc": "2026-10-04T23:21:11.809Z",
+      "plateLocationFeet": {
+        "x": 0.10964697352463675,
+        "z": 2.4646421307289845
+      },
+      "hitData": null
+    },
+    {
+      "number": 4,
+      "type": "Four-Seam Fastball",
+      "typeCode": "FF",
+      "speedMph": 103.5,
+      "description": "Foul",
+      "countAfter": {
+        "balls": 1,
+        "strikes": 2
+      },
+      "outs": 2,
+      "startTimeUtc": "2026-10-04T23:21:53.512Z",
+      "plateLocationFeet": {
+        "x": 0.6783100237923814,
+        "z": 2.0327413613233083
+      },
+      "hitData": null
+    },
+    {
+      "number": 5,
+      "type": "Slider",
+      "typeCode": "SL",
+      "speedMph": 88.8,
+      "description": "Ball",
+      "countAfter": {
+        "balls": 2,
+        "strikes": 2
+      },
+      "outs": 2,
+      "startTimeUtc": "2026-10-04T23:22:20.212Z",
+      "plateLocationFeet": {
+        "x": -0.04598876741520515,
+        "z": 0.9568364528577188
+      },
+      "hitData": null
+    },
+    {
+      "number": 6,
+      "type": "Four-Seam Fastball",
+      "typeCode": "FF",
+      "speedMph": 101.3,
+      "description": "In play, run(s)",
+      "countAfter": {
+        "balls": 2,
+        "strikes": 2
+      },
+      "outs": 2,
+      "startTimeUtc": "2026-10-04T23:22:41.587Z",
+      "plateLocationFeet": {
+        "x": 0.31075485459923724,
+        "z": 2.717788070342726
+      },
+      "hitData": {
+        "launchSpeed": 109.5,
+        "launchAngle": 8.0,
+        "totalDistance": 153.0,
+        "trajectory": "line_drive",
+        "hardness": "medium",
+        "location": "8",
+        "coordinates": {
+          "coordX": 147.86,
+          "coordY": 78.97
+        }
+      }
+    }
+  ],
+  "ninthInningChronology": [
+    {
+      "batter": "Garrett Mitchell",
+      "event": "Groundout",
+      "description": "Garrett Mitchell grounds out, shortstop Xander Bogaerts to first baseman Ty France.",
+      "outsAfter": 1,
+      "scoreAfter": {
+        "Padres": 3,
+        "Brewers": 2
+      },
+      "startTimeUtc": "2026-10-04T23:07:03.182Z",
+      "endTimeUtc": "2026-10-04T23:07:31.153Z"
+    },
+    {
+      "batter": "Christian Yelich",
+      "event": "Walk",
+      "description": "Christian Yelich walks.",
+      "outsAfter": 1,
+      "scoreAfter": {
+        "Padres": 3,
+        "Brewers": 2
+      },
+      "startTimeUtc": "2026-10-04T23:07:56.316Z",
+      "endTimeUtc": "2026-10-04T23:09:15.762Z"
+    },
+    {
+      "event": "Stolen Base",
+      "description": "Christian Yelich steals second base during Sal Frelick’s plate appearance.",
+      "source": "MLB StatsAPI playEvents"
+    },
+    {
+      "batter": "Sal Frelick",
+      "event": "Walk",
+      "description": "Sal Frelick walks.",
+      "outsAfter": 1,
+      "scoreAfter": {
+        "Padres": 3,
+        "Brewers": 2
+      },
+      "startTimeUtc": "2026-10-04T23:09:41.839Z",
+      "endTimeUtc": "2026-10-04T23:12:24.294Z"
+    },
+    {
+      "batter": "Andrew Vaughn",
+      "event": "Flyout",
+      "description": "Andrew Vaughn flies out to center fielder Jackson Merrill.",
+      "outsAfter": 2,
+      "scoreAfter": {
+        "Padres": 3,
+        "Brewers": 2
+      },
+      "startTimeUtc": "2026-10-04T23:14:01.693Z",
+      "endTimeUtc": "2026-10-04T23:15:10.892Z"
+    },
+    {
+      "batter": "Gary Sánchez",
+      "event": "Walk",
+      "description": "Gary Sánchez walks. Christian Yelich to 3rd. Sal Frelick to 2nd.",
+      "outsAfter": 2,
+      "scoreAfter": {
+        "Padres": 3,
+        "Brewers": 2
+      },
+      "startTimeUtc": "2026-10-04T23:16:34.409Z",
+      "endTimeUtc": "2026-10-04T23:19:36.242Z"
+    },
+    {
+      "event": "Pinch Runner",
+      "description": "Joey Ortiz replaces Gary Sánchez at first base before Jackson Chourio’s first pitch.",
+      "source": "MLB StatsAPI playEvents"
+    },
+    {
+      "batter": "Jackson Chourio",
+      "event": "Single",
+      "description": "Jackson Chourio singles on a line drive to center fielder Jackson Merrill. Christian Yelich scores. Sal Frelick scores. Joey Ortiz to 2nd.",
+      "outsAfter": 2,
+      "scoreAfter": {
+        "Padres": 3,
+        "Brewers": 4
+      },
+      "startTimeUtc": "2026-10-04T23:20:29.820Z",
+      "endTimeUtc": "2026-10-04T23:22:52.959Z"
+    }
+  ],
+  "result": {
+    "event": "Two-run walk-off single",
+    "description": "Jackson Chourio singles on a line drive to center fielder Jackson Merrill. Christian Yelich scores. Sal Frelick scores. Joey Ortiz to 2nd.",
+    "scoringRunners": [
+      "Christian Yelich",
+      "Sal Frelick"
+    ],
+    "rbi": 2,
+    "finalScore": {
+      "Brewers": 4,
+      "Padres": 3
+    },
+    "seriesAfter": {
+      "Brewers": 2,
+      "Padres": 0
+    },
+    "millerPitchCountFinal": 40,
+    "exitVelocityMph": 109.5,
+    "launchAngleDegrees": 8.0
+  },
+  "sources": [
+    {
+      "title": "MLB StatsAPI official game feed",
+      "url": "https://statsapi.mlb.com/api/v1.1/game/849825/feed/live",
+      "supports": "Game date, venue, inning, count, all six pitches, ninth-inning events, runners, score, attendance, timestamps, pitch/hit measurements."
+    },
+    {
+      "title": "MLB Gameday: Padres 3, Brewers 4",
+      "url": "https://www.mlb.com/gameday/padres-vs-brewers/2026/10/04/849825/final/box",
+      "supports": "Date, final result."
+    },
+    {
+      "title": "Jackson Chourio’s walk-off single",
+      "url": "https://www.mlb.com/video/jackson-chourio-s-walk-off-single",
+      "supports": "Official play video and Statcast measurements."
+    },
+    {
+      "title": "Chourio bests Miller with walk-off to give Brewers 2-0 NLDS lead",
+      "url": "https://www.mlb.com/news/brewers-win-nlds-game-2-2026",
+      "supports": "Series context and qualitative account."
+    },
+    {
+      "title": "Padres lose NLDS Game 2",
+      "url": "https://www.mlb.com/news/padres-lose-nlds-game-2-2026",
+      "supports": "Padres perspective and six-out-save assignment."
+    },
+    {
+      "title": "User-provided MLB post",
+      "url": "https://x.com/MLB/status/2106895165168513255",
+      "supports": "User’s visual reference; web tool could not fetch this URL directly."
+    }
+  ],
+  "notes": [
+    "Four-seam fastballs are abbreviated FF in the official feed.",
+    "Pitch 5 was thrown at a 1-2 count and produced a 2-2 count. One MLB takeaway story describes a 2-2 slider; the official feed establishes the sequence recorded here.",
+    "The Padres article rounds the batted-ball speed to 110 mph. The official feed and MLB highlight list 109.5 mph.",
+    "The ballpark screenshot visibly shows warm evening light. Exact astronomical sunset time has not been verified.",
+    "Our best vs. their best is the user’s editorial framing; avoid presenting it as an objectively verified player ranking.",
+    "MLB boxscore seasonStats in this postseason feed refer to the postseason, not the regular season. They are labeled verifiedPostseasonStatsThroughGame here."
+  ],
+  "verifiedPostseasonStatsThroughGame": {
+    "Mason Miller": {
+      "batting": {
+        "homeRuns": 0,
+        "hits": 0,
+        "avg": ".000",
+        "atBats": 0,
+        "obp": ".000",
+        "slg": ".000",
+        "ops": ".000",
+        "rbi": 0
+      },
+      "pitching": {
+        "gamesPlayed": 2,
+        "strikeOuts": 4,
+        "baseOnBalls": 3,
+        "era": "6.75",
+        "inningsPitched": "2.2",
+        "saves": 1
+      }
+    },
+    "Jackson Chourio": {
+      "batting": {
+        "homeRuns": 1,
+        "hits": 2,
+        "avg": ".250",
+        "atBats": 8,
+        "obp": ".333",
+        "slg": ".625",
+        "ops": ".958",
+        "rbi": 4
+      },
+      "pitching": {
+        "gamesPlayed": 0,
+        "strikeOuts": 0,
+        "baseOnBalls": 0,
+        "era": "-.--",
+        "inningsPitched": "0.0",
+        "saves": 0
+      }
+    }
+  }
+}

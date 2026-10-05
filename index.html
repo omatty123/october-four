@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b28">
+  <meta name="description" content="October 4, 2026. Jackson Chourio against Mason Miller, the sun setting at American Family Field, and six pitches that gave Milwaukee a 4–3 walk-off win.">
+  <meta property="og:title" content="Our best. Their best. — October 4">
+  <meta property="og:description" content="A ballpark in the last light. Two outs. Bases loaded. Remembering Jackson Chourio’s October 4 walk-off against Mason Miller.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://omatty123.github.io/october-four/">
+  <meta property="og:image" content="https://omatty123.github.io/october-four/assets/ballpark.webp">
+  <meta property="og:image:width" content="2200">
+  <meta property="og:image:height" content="1241">
+  <title>Our best. Their best. — October 4, 2026</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the story</a>
+  <header class="masthead">
+    <a class="wordmark" href="#main" aria-label="October 4, back to the beginning">OCTOBER <span>4</span></a>
+    <p>A Brewers day to remember</p>
+    <a class="masthead-link" href="https://x.com/MLB/status/2106895165168513255" target="_blank" rel="noopener noreferrer">Watch the moment <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="title">
+      <img class="hero-image" src="assets/ballpark.webp" width="2200" height="1241" alt="The roof open at American Family Field, evening sunlight turning the upper deck orange, as Jackson Chourio steps in against Mason Miller." fetchpriority="high">
+      <div class="hero-content">
+        <h1 id="title">Our best.<br><span>Their best.</span></h1>
+        <p>Chourio at the plate. Miller on the mound.<br>The sun setting on the ballpark.</p>
+        <a class="story-link" href="#matchup">And what happened? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+      </div>
+      <div class="hero-caption"><time datetime="2026-10-04">Sunday, October 4, 2026</time><span>American Family Field · Milwaukee</span></div>
+    </section>
+
+    <div class="game-strip" aria-label="Game situation before Chourio’s at-bat">
+      <div class="strip-score"><span>SD <strong>3</strong></span><span class="strip-divider" aria-hidden="true">/</span><span>MIL <strong>2</strong></span></div>
+      <p>Bottom of the 9th</p>
+      <p>2 outs</p>
+      <p class="loaded"><span class="tiny-diamond" aria-hidden="true"><i></i><i></i><i></i></span>Bases loaded</p>
+      <p class="series-note">NLDS · Game 2</p>
+    </div>
+
+    <section class="matchup section-wrap" id="matchup" aria-labelledby="matchup-title">
+      <div class="section-intro">
+        <h2 id="matchup-title">One last chance.</h2>
+        <p>Milwaukee trailed by one. Three walks had loaded the bases. With two outs, the game came down to these two.</p>
+      </div>
+      <div class="portraits">
+        <figure class="portrait chourio">
+          <img src="assets/chourio.webp" width="1000" height="1031" alt="Jackson Chourio looking toward the mound from beneath his Brewers batting helmet." loading="lazy">
+          <figcaption><span>Our best.</span><h3>Jackson<br>Chourio</h3><p>Milwaukee · At the plate</p></figcaption>
+        </figure>
+        <div class="versus" aria-hidden="true">vs.</div>
+        <figure class="portrait miller">
+          <img src="assets/miller.webp" width="1000" height="1083" alt="Mason Miller looking toward home plate beneath his Padres cap." loading="lazy">
+          <figcaption><span>Their best.</span><h3>Mason<br>Miller</h3><p>San Diego · On the mound</p></figcaption>
+        </figure>
+      </div>
+      <p class="matchup-note">The hitter we wanted. The pitcher they wanted. Everything still possible.</p>
+    </section>
+
+    <section class="at-bat" id="at-bat" aria-labelledby="at-bat-title">
+      <div class="section-wrap">
+        <div class="section-intro">
+          <h2 id="at-bat-title">Six pitches.<br>One ending.</h2>
+          <p>Miller’s fourth pitch reached 103.5 mph. Chourio stayed with him. Follow the at-bat, one pitch at a time.</p>
+        </div>
+        <div class="replay">
+          <div class="pitch-stage">
+            <div class="pitch-status"><p id="pitch-number">Pitch 1 of 6</p><p id="pitch-count">Count: 0–1</p></div>
+            <div class="velocity"><strong id="velocity">100.8</strong><span>mph</span></div>
+            <h3 id="pitch-type">Four-seam fastball</h3>
+            <p id="pitch-description">Chourio swings and misses. Strike one.</p>
+            <div class="stage-game"><div><span>SD</span><strong>3</strong></div><span aria-hidden="true">—</span><div><span>MIL</span><strong id="mil-score">2</strong></div><p id="stage-state">2 outs · Bases loaded</p></div>
+            <div class="replay-controls" hidden>
+              <button class="next-pitch" id="next-pitch" type="button">Next pitch <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+              <span id="replay-hint">Step through the finish</span>
+            </div>
+            <p class="sr-only" id="replay-announcement" aria-live="polite" aria-atomic="true"></p>
+          </div>
+          <ol class="pitch-list" aria-label="Chourio’s complete six-pitch at-bat">
+            <li><button class="pitch selected" type="button" data-speed="100.8" data-count="0–1" data-type="Four-seam fastball" data-description="Chourio swings and misses. Strike one." aria-current="step"><span class="pitch-index">1</span><span class="pitch-detail"><strong>100.8 mph <span>Fastball</span></strong><span>Swinging strike · 0–1</span></span><span class="pitch-mark" aria-hidden="true">S</span></button></li>
+            <li><button class="pitch" type="button" data-speed="102.2" data-count="1–1" data-type="Four-seam fastball" data-description="Outside. Chourio lets it go. One ball, one strike."><span class="pitch-index">2</span><span class="pitch-detail"><strong>102.2 mph <span>Fastball</span></strong><span>Ball · 1–1</span></span><span class="pitch-mark" aria-hidden="true">B</span></button></li>
+            <li><button class="pitch" type="button" data-speed="102.2" data-count="1–2" data-type="Four-seam fastball" data-description="Another swing and miss. One strike from the end."><span class="pitch-index">3</span><span class="pitch-detail"><strong>102.2 mph <span>Fastball</span></strong><span>Swinging strike · 1–2</span></span><span class="pitch-mark" aria-hidden="true">S</span></button></li>
+            <li><button class="pitch" type="button" data-speed="103.5" data-count="1–2" data-type="Four-seam fastball" data-description="103.5 mph. Chourio fouls it off. Still alive."><span class="pitch-index">4</span><span class="pitch-detail"><strong>103.5 mph <span>Fastball</span></strong><span>Foul ball · 1–2</span></span><span class="pitch-mark" aria-hidden="true">F</span></button></li>
+            <li><button class="pitch" type="button" data-speed="88.8" data-count="2–2" data-type="Slider" data-description="Miller changes speed. The slider is low. Chourio takes it."><span class="pitch-index">5</span><span class="pitch-detail"><strong>88.8 mph <span>Slider</span></strong><span>Ball · 2–2</span></span><span class="pitch-mark" aria-hidden="true">B</span></button></li>
+            <li><button class="pitch winning-pitch" type="button" data-speed="101.3" data-count="2–2" data-type="Four-seam fastball" data-description="A single into the outfield. Yelich scores. Frelick follows. Milwaukee wins."><span class="pitch-index">6</span><span class="pitch-detail"><strong>101.3 mph <span>Fastball</span></strong><span>Two-run single · Walk-off</span></span><svg class="hit-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></button></li>
+          </ol>
+        </div>
+        <p class="data-note">Pitch speeds and sequence: <a href="https://www.mlb.com/gameday/padres-vs-brewers/2026/10/04/849825/final/play-by-play" target="_blank" rel="noopener noreferrer">MLB Gameday</a>.</p>
+      </div>
+    </section>
+
+    <section class="ending section-wrap" id="ending" aria-labelledby="ending-title">
+      <div class="ending-word"><h2 id="ending-title">And then,<br><span>we won.</span></h2><p>Chourio drove the sixth pitch into the outfield. Christian Yelich scored the tying run. Sal Frelick scored the winning run.</p><p>The sun was setting.<br>Milwaukee was celebrating.</p></div>
+      <div class="final-score" aria-label="Final score: San Diego Padres 3, Milwaukee Brewers 4">
+        <p>Final · October 4, 2026</p>
+        <div><span>San Diego</span><strong>3</strong></div>
+        <div class="winner"><span>Milwaukee</span><strong>4</strong></div>
+        <p class="series-final">Brewers lead the series 2–0</p>
+      </div>
+      <div class="watch-row"><a class="watch-link" href="https://x.com/MLB/status/2106895165168513255" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg>Watch the walk-off</a><a class="box-link" href="https://www.mlb.com/gameday/padres-vs-brewers/2026/10/04/849825/final/box" target="_blank" rel="noopener noreferrer">The full game <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+    </section>
+    <figure class="last-light"><img src="assets/ballpark.webp" width="2200" height="1241" alt="The evening light at American Family Field, moments before the winning hit." loading="lazy"><figcaption>A day worth keeping.</figcaption></figure>
+  </main>
+
+  <footer class="footer section-wrap">
+    <div><a class="wordmark" href="#main">OCTOBER <span>4</span></a><p>Milwaukee, Wisconsin · 2026</p></div>
+    <details class="sources"><summary>Sources &amp; image credits</summary><p>An independent Brewers fan remembrance. “Our best” and “their best” express a fan’s perspective.</p><ul><li><a href="https://x.com/MLB/status/2106895165168513255" target="_blank" rel="noopener noreferrer">MLB’s original post and clip</a></li><li><a href="https://www.mlb.com/gameday/padres-vs-brewers/2026/10/04/849825/final/box" target="_blank" rel="noopener noreferrer">MLB Gameday — October 4, 2026</a></li><li><a href="https://statsapi.mlb.com/api/v1.1/game/849825/feed/live" target="_blank" rel="noopener noreferrer">Official MLB pitch-by-pitch data</a></li></ul><p>Broadcast screenshots supplied by the page’s creator; MLB / FS1 broadcast imagery. <a href="assets/CREDITS.md">Image and font credits</a>. <a href="assets/originals/Screenshot%202026-10-05%20at%2007.47.25.png">Chourio original</a> · <a href="assets/originals/Screenshot%202026-10-05%20at%2007.47.31.png">Miller original</a> · <a href="assets/originals/Screenshot%202026-10-05%20at%2007.47.58.png">Ballpark original</a>.</p></details>
+  </footer>
+</body>
+</html>
