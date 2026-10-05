@@ -24,6 +24,10 @@ Three user-supplied screenshots: Chourio, Miller, and the ballpark. Original MLB
 
 ## Capabilities and Constraints
 
+The user explicitly requires compact design: small complete-sentence headings, readable ordinary text, tight spacing, and the video near the top. Do not restore oversized two-word headings, tall decorative sections, repeated pictures, or large empty gaps.
+
+The final pitch must play directly on the page. Use the official 48-second MLB highlight in a native video player with controls, inline playback, English captions, and no autoplay. The page's Watch links point to that player.
+
 Preserve the original screenshots and attribute the broadcast. Use actual game facts and sourced pitch speeds. Show the sunset image, two players, and outcome. Support mobile screens, keyboard navigation, and reduced motion. Keep every game fact readable without JavaScript. Do not auto-play media or invent sunset times or spectator attendance.
 
 ## Brand Commitments

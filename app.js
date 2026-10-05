@@ -37,3 +37,13 @@ if (pitches.length === 6 && next && controls) {
   next.addEventListener('click', () => selectPitch((current + 1) % pitches.length));
   controls.hidden = false;
 }
+
+const film = document.getElementById('walkoff-video');
+const filmError = document.getElementById('video-error');
+if (film && filmError) {
+  const showFilmError = () => { filmError.hidden = false; };
+  film.addEventListener('error', showFilmError);
+  const source = film.querySelector('source');
+  if (source) source.addEventListener('error', showFilmError);
+  film.addEventListener('loadeddata', () => { filmError.hidden = true; });
+}

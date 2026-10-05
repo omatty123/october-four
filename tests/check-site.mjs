@@ -48,13 +48,28 @@ class Element {
   setAttribute(name, value) { this.attributes[name] = String(value); }
   removeAttribute(name) { delete this.attributes[name]; }
   getAttribute(name) { return this.attributes[name] ?? null; }
+  querySelectorAll(selector) {
+    return this.children.filter(child => child instanceof Element)
+      .flatMap(child => [child, ...child.descendants()])
+      .filter(element => matches(element, selector));
+  }
+  querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
+  descendants() {
+    return this.children.filter(child => child instanceof Element)
+      .flatMap(child => [child, ...child.descendants()]);
+  }
   addEventListener(event, handler) {
     const handlers = this.listeners.get(event) || [];
     handlers.push(handler);
     this.listeners.set(event, handlers);
   }
-  click() { for (const handler of this.listeners.get('click') || []) handler({ target: this }); }
+  dispatchEvent(event) { for (const handler of this.listeners.get(event.type) || []) handler(event); }
+  click() { this.dispatchEvent({ type: 'click', target: this }); }
 }
+
+const matches = (element, selector) => selector.startsWith('.')
+  ? element.classList.contains(selector.slice(1))
+  : selector.startsWith('#') ? element.attributes.id === selector.slice(1) : element.tagName === selector;
 
 function parseHtml(source) {
   const root = new Element('document');
@@ -85,9 +100,6 @@ function parseHtml(source) {
       parent.children.push({ textContent: decode(token), parent });
     }
   }
-  const matches = (element, selector) => selector.startsWith('.')
-    ? element.classList.contains(selector.slice(1))
-    : selector.startsWith('#') ? element.attributes.id === selector.slice(1) : element.tagName === selector;
   return {
     elements,
     root,
@@ -170,7 +182,7 @@ test('local assets, fragments, original screenshots, and font licenses are compl
   const ids = document.elements.map(element => element.attributes.id).filter(Boolean);
   assert.equal(new Set(ids).size, ids.length, 'HTML IDs are unique');
   for (const element of document.elements) {
-    for (const attribute of ['href', 'src']) {
+    for (const attribute of ['href', 'src', 'poster']) {
       const url = element.attributes[attribute];
       if (url?.startsWith('#')) assert.ok(ids.includes(decodeURIComponent(url.slice(1))), `Fragment exists: ${url}`);
       else assertLocalFile(url, 'index.html');
@@ -192,7 +204,10 @@ test('local assets, fragments, original screenshots, and font licenses are compl
 
 test('the outcome and complete at-bat remain available without JavaScript', () => {
   const document = parseHtml(html);
-  assertVisibleWithoutScript(document.querySelector('.hero-caption'), 'Game date and venue');
+  const date = document.elements.find(element => element.tagName === 'time' && element.attributes.datetime === game.date);
+  assertVisibleWithoutScript(date, 'Game date');
+  assertVisibleWithoutScript(date.parent, 'Game date and venue');
+  assert.ok(date.parent.textContent.includes(game.venue), 'Venue appears beside the game date');
   assertVisibleWithoutScript(document.querySelector('.game-strip'), 'Initial game situation');
   assertVisibleWithoutScript(document.querySelector('.pitch-list'), 'Complete six-pitch sequence');
   assertVisibleWithoutScript(document.getElementById('ending'), 'Game outcome');
@@ -207,6 +222,55 @@ test('the outcome and complete at-bat remain available without JavaScript', () =
     if (!/display\s*:\s*none|visibility\s*:\s*hidden/.test(rule[2])) continue;
     assert.doesNotMatch(rule[1], /\.pitch-list\b|\.ending\b|#ending\b|\.final-score\b/, 'Critical facts are not hidden by screen CSS');
   }
+});
+
+test('the last pitch has an accessible on-page video and direct watch links', () => {
+  const document = parseHtml(html);
+  const section = document.getElementById('last-pitch');
+  const video = document.getElementById('walkoff-video');
+  assertVisibleWithoutScript(section, 'Last-pitch video section');
+  assertVisibleWithoutScript(video, 'Embedded last-pitch video');
+  assert.equal(video.tagName, 'video', 'The walk-off uses a native video player');
+  assert.ok('controls' in video.attributes, 'Viewer can play, pause, seek, and change sound');
+  assert.ok('playsinline' in video.attributes, 'Playback can stay within the mobile page');
+  assert.ok(!('autoplay' in video.attributes), 'Video waits for the viewer to play');
+  assert.equal(video.attributes.preload, 'metadata', 'Initial page load does not preload the full video');
+  assert.equal(video.attributes.crossorigin, 'anonymous', 'Cross-origin captions can load');
+  assert.equal(video.attributes.poster, 'assets/ballpark.webp', 'The first player view shows the ballpark');
+  const source = video.children.find(child => child.tagName === 'source');
+  assert.ok(source, 'Official video source is embedded');
+  assert.equal(source.attributes.type, 'video/mp4');
+  assert.equal(source.attributes.src, 'https://mlb-cuts-diamond.mlb.com/FORGE/2026/2026-10/04/3649faa5-24ed0c2b-6ef92940-csvm-diamondgcp-asset_1280x720_59_4000K.mp4');
+  const captions = video.children.find(child => child.tagName === 'track' && child.attributes.kind === 'captions');
+  assert.ok(captions, 'Video provides a captions track');
+  assert.equal(captions.attributes.srclang, 'en');
+  assert.ok(captions.attributes.label, 'Captions track has a visible language label');
+  assert.equal(captions.attributes.src, 'https://mlb-cuts-diamond.mlb.com/FORGE/WEBVTT/2026/2026-10/04/20261004_MIL_CHOURIO_WALK_OFF_2RUN_SINGLE_B9_CC.c3po.vtt');
+  let ancestor = video.parent;
+  while (ancestor && ancestor !== section) ancestor = ancestor.parent;
+  assert.equal(ancestor, section, 'Video belongs to the last-pitch section');
+  const index = document.elements.indexOf(section);
+  assert.ok(index > document.elements.indexOf(document.getElementById('matchup')), 'Video follows the matchup');
+  assert.ok(index < document.elements.indexOf(document.getElementById('at-bat')), 'Video precedes the pitch replay');
+  for (const selector of ['.masthead-link', '.watch-link']) {
+    const link = document.querySelector(selector);
+    assert.ok(link, `${selector} exists`);
+    assert.equal(link.attributes.href, '#last-pitch', `${selector} takes viewers directly to on-page playback`);
+    assert.ok(!('target' in link.attributes), `${selector} keeps viewers on this page`);
+  }
+  const fallback = document.getElementById('video-error');
+  assert.ok(fallback, 'Media failures provide a readable recovery message');
+  assert.equal(fallback.hidden, true, 'Recovery message does not appear before an error');
+  assert.equal(fallback.attributes.role, 'status', 'Recovery message announces errors accessibly');
+  const alternate = fallback.querySelector('a');
+  assert.equal(alternate?.attributes.href, 'https://www.mlb.com/video/jackson-chourio-s-walk-off-single');
+  vm.runInNewContext(app, { document }, { filename: 'app.js', timeout: 1000 });
+  source.dispatchEvent({ type: 'error', target: source });
+  assert.equal(fallback.hidden, false, 'Failed source exposes the recovery link');
+  video.dispatchEvent({ type: 'loadeddata', target: video });
+  assert.equal(fallback.hidden, true, 'Successful loading clears the recovery message');
+  video.dispatchEvent({ type: 'error', target: video });
+  assert.equal(fallback.hidden, false, 'Player-level errors also expose recovery');
 });
 
 test('replay advances six pitches, changes the score only on the hit, and can replay or go back', () => {

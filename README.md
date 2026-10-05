@@ -25,4 +25,4 @@ node tests/check-site.mjs
 
 GitHub Actions runs the checks and deploys only the page, its assets, and factual game data. Source imagery is retained under `assets/originals`. Credits and font licenses are under `assets`.
 
-The page's outcome remains visible without JavaScript. JavaScript adds an optional six-pitch replay. No analytics, autoplay, accounts, or external runtime dependencies are used.
+The page's outcome remains visible without JavaScript. JavaScript adds an optional six-pitch replay. The final-pitch video plays directly on the page with native controls and English captions, streamed from MLB's official public media URLs. No analytics, autoplay, accounts, or external runtime dependencies are used.
